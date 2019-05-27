@@ -69,6 +69,7 @@ const resolve = (url) => {
                 studentInfo($, data);
                 result($, data);
                 console.log(data.RollNo, data.Name)
+                // debugger;
                 writeFile(data);
                 console.log(i++)
             }
@@ -142,7 +143,7 @@ class resultClass {
             this.pass = true;
             // console.log(this.subject)
         }
-
+        debugger
         // console.log(this)
         if (this.internal && this.external && this.total) {
             this.pass = true;
