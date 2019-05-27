@@ -132,18 +132,18 @@ class resultClass {
         this.subject = arr[0].trim();
         this.internal = typeCheck(arr[1]);
         this.external = typeCheck(arr[2]);
-        this.total = typeCheck(arr[5]);
+        this.total = typeCheck(arr[3]);
         // console.log(this.subject)
-        if (this.subject === 'Drug Abuse: Problem') {
+        if (this.subject === "Seminar (based on summer training)") {
             // console.log(this.subject,arr)
-            this.subject = arr[0] + ' ' + arr[1];
-            this.internal = typeCheck(arr[2]);
-            this.external = typeCheck(arr[3]);
-            this.total = 0;
+            this.subject = arr[0].trim();
+            this.internal = typeCheck(arr[1]);
+            this.external = typeCheck(arr[2]);
+            this.total = arr[3];
             this.pass = true;
             // console.log(this.subject)
         }
-        debugger
+        // debugger
         // console.log(this)
         if (this.internal && this.external && this.total) {
             this.pass = true;
@@ -157,7 +157,7 @@ class resultClass {
         //     this.pass = true;
 
         //bcom
-        if (this.subject == 'Drug Abuse: Problem  Management & Prevention')
+        if (this.subject == "Seminar (based on summer training)")
             console.log(this.pass = true);
 
         // console.log(this)

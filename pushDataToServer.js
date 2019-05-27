@@ -61,7 +61,9 @@ function getTotal(arr) {
     return arr.reduce((a, c) => {
         // c = execptions.indexOf(c.subject) === -1 ? (c.internal ? c.internal : 0) +
         //     (c.external ? c.external : 0) : 0
-        return a + (c.total?c.total:0)
+        let total = a + (c.total?(typeof c.total === "string"?0:c.total):((c.internal?c.internal:0)+(c.external?c.external:0)))
+        // debugger
+        return total
     }, 0)
 }
 
